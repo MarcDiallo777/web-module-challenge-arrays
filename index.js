@@ -62,11 +62,13 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
-
-
-function is31Flavors(/*your code here*/){
-   /*your code here*/
-}
+function is31Flavors(arr){
+    if (arr.length === 31){
+      return "TRUE";
+    }
+  }
+  
+  console.log(is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -79,11 +81,14 @@ Use the addFlavor function below to do the following:
 
     For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
+function addFlavors(arr, newFlavor){
+    arr.push(newFlavor);
+    return arr;
+  }
+  
+  console.log(addFlavors(originalFlavors, "Peanut Butter"));
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
-}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -96,11 +101,12 @@ Use the removeLastFlavor function below to do the following:
 
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
-}
-
+function removeFlavor(arr){
+    arr.pop();
+    return arr;
+  }
+  
+  console.log(removeFlavor(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -113,10 +119,13 @@ Use the getFlavorByIndex function below to do the following:
 
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
+function getFlavor(arr, indexNum){
+    return arr[indexNum];
+  }
+  
+  
+  console.log(getFlavor(originalFlavors, 2));
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
-}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -133,12 +142,12 @@ Use the removeFlavorByName function below to do the following:
 
     HINT: You can use .splice() for this
 */
-
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
-}
-
-
+function removeFlavor(arr, flavName){
+    arr.splice(flavName);
+    return arr;
+  }
+  
+  console.log(removeFlavor(originalFlavors, "Vanilla"));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -159,10 +168,11 @@ Use the filterByWord function below to do the following:
 
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
-
-function filterByWord(/*your code here*/){
-    /*your code here*/
-}
+function filterbyWord(arr, name){
+    if (let i = 0; arr.length < i; i++){
+      arr.includes("Choclate");
+    }
+  }
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
